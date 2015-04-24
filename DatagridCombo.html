@@ -4,7 +4,7 @@
     <title></title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link href="DropdownDatagrid.css" rel="stylesheet" />
-    <script src="DropDownDataGrid.js"></script>
+    <script src="DropdownDatagrid.js"></script>
 </head>
 <body style="background-color: whitesmoke">
     <div id="drddowndatagrid">
@@ -13,10 +13,11 @@
 <script>
     var date = new Date();
     var listitem = [
-       { ID: 1, SampleID: 51, SampleCreated: date },
-       { ID: 2, SampleID: 52, SampleCreated: date },
-       { ID: 3, SampleID: 53, SampleCreated: date }
+       { ID: 1, SampleID: 51, SampleCreated: date , Amount: 10, Data: "Monday" },
+       { ID: 2, SampleID: 52, SampleCreated: date , Amount: 100, Data: "Tuesday" },
+       { ID: 3, SampleID: 53, SampleCreated: date , Amount: 200, Data: "Wednesday"}
     ];
+
     $(function () {
         var listitems;
         $("#drddowndatagrid").DropdownDatagrid({
@@ -28,7 +29,9 @@
             displayColumn: 'SampleID',
             columns: [
               { field: 'ID', title: 'ID', align: 'center' },
-              { field: 'SampleCreated', title: 'Created', align: 'left' }
+              { field: 'SampleCreated', title: 'Created', align: 'left' },
+			  { field: 'Amount', title: 'Amount', align: 'left' },
+			  { field: 'Data', title: 'Data', align: 'left' }			  
             ],
             onRowSelection: function (rowid, ele, selected) {
                 alert("rowid : " + rowid + " selected : " + selected)
@@ -36,6 +39,7 @@
         });
         $("#drddowndatagrid").DropdownDatagrid('defaultvalue', { field: "SampleID", value: 53 });
         $("#drddowndatagrid").DropdownDatagrid('reload');
+
     });
 </script>
 </html>

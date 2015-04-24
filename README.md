@@ -2,7 +2,7 @@
 
 This jquery plugin combines the functionality of datagrid and combo box into one. 
 
-[Demo]
+[Demo] (http://moniecorleone.github.io/DropDownDataGrid/DatagridCombo.html)
 
 
 ## Basic Usage

@@ -1,0 +1,63 @@
+.DropdownDatagrid .drpdownselect {
+    border: 1px solid #CCCBCB;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    cursor: default;
+    width:180px;
+    background-color:#fff;
+    background-image: url('images/DropDownArrow.png');
+    padding: 0px 10px;
+    background-position: 160px;
+    background-repeat: no-repeat;
+}
+
+
+.DropdownDatagrid span {
+    float: left;
+}
+
+
+.DropdownDatagrid table {
+    width: 100%;
+    border: 1px solid #CCCBCB;
+}
+
+    .DropdownDatagrid table th {
+        text-align: center;
+        font-family: opensansbold;
+        padding: 3px 10px;
+        background: #e6e7e8;
+        height: 26px;
+    }
+
+        .DropdownDatagrid table th:first-child {
+                    border-right:1px solid #CCCBCB;
+        }
+
+    .DropdownDatagrid table td {
+        border: 1px solid #CCCBCB;
+        padding: 3px 10px;
+    }
+
+    .DropdownDatagrid table tr:hover {
+        background: #3EB2C4;
+    }
+
+        .DropdownDatagrid table tr:hover td {
+            color: #fff;
+        }
+
+.DropdownDatagrid .drpdowndatagriddiv {
+    z-index: 9999999999;
+    background: #fff;
+}
+
+
+.drpdowndatagriddiv .selectedRow {
+    background: #3EB2C4;
+}
+
+    .drpdowndatagriddiv .selectedRow td {
+        color: #fff;
+    }

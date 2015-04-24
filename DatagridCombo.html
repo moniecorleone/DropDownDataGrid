@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href="DropdownDatagrid.css" rel="stylesheet" />
+    <script src="DropdownDatagrid.js"></script>
+</head>
+<body style="background-color: whitesmoke">
+    <div id="drddowndatagrid">
+    </div>    
+</body>
+<script>
+    var date = new Date();
+    var listitem = [
+       { ID: 1, SampleID: 51, SampleCreated: date },
+       { ID: 2, SampleID: 52, SampleCreated: date },
+       { ID: 3, SampleID: 53, SampleCreated: date }
+    ];
+    $(function () {
+        var listitems;
+        $("#drddowndatagrid").DropdownDatagrid({
+            defaultselecttext: "Select",
+            //defaultvalue: { field: "ID", value: 2 },
+            gridwidth: '500px',
+            data: listitem,
+            ValueMemberId: 'ID',
+            displayColumn: 'SampleID',
+            columns: [
+              { field: 'ID', title: 'ID', align: 'center' },
+              { field: 'SampleCreated', title: 'Created', align: 'left' }
+            ],
+            onRowSelection: function (rowid, ele, selected) {
+                alert("rowid : " + rowid + " selected : " + selected)
+            },
+        });
+        $("#drddowndatagrid").DropdownDatagrid('defaultvalue', { field: "SampleID", value: 53 });
+        $("#drddowndatagrid").DropdownDatagrid('reload');
+    });
+</script>
+</html>
